@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="FUIProject_B.Controls.SimpleControls.ComboBoxType1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="200" Height="100">
+	<UserControl.Resources>
+		<Storyboard x:Key="MouseEnterAction" Storyboard.TargetName="BeforeButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF21A8FF"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF194769"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="MouseLeaveAction" Storyboard.TargetName="BeforeButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF1E445B"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF051019"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="MouseLeftButtonDownAction" Storyboard.TargetName="BeforeButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FF664904"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFDBC0E"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="AbleAction">
+			<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="BeforeButton">
+				<DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+			</BooleanAnimationUsingKeyFrames>
+			<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="NextButton">
+				<DiscreteBooleanKeyFrame KeyTime="0" Value="True"/>
+			</BooleanAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF03F5FB"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path1">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF03F5FB"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="SelectText">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FFFDBC0F"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="UnableAction">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="SelectText">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF8D8D8D"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF8D8D8D"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path1">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="#FF8D8D8D"/>
+			</ColorAnimationUsingKeyFrames>
+			<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="BeforeButton">
+				<DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+			</BooleanAnimationUsingKeyFrames>
+			<BooleanAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.IsHitTestVisible)" Storyboard.TargetName="NextButton">
+				<DiscreteBooleanKeyFrame KeyTime="0" Value="False"/>
+			</BooleanAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+		</EventTrigger>
+	</UserControl.Triggers>
+    <Grid>
+    	<Path Data="F1M1546.2637,992.2876L1637.2497,992.2876L1637.2497,900.8156L1596.6187,900.8156L1576.8247,919.8796L1433.5727,919.8796L1433.5727,977.0696L1530.4627,977.0696z" Fill="#FF00040A" Height="91.472" Stretch="Fill" Width="203.677" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Bottom"/>
+            
+    	<Path Data="F1M1546.264,983.089L1637.25,983.089L1637.25,891.617L1596.619,891.617L1576.824,910.681L1433.572,910.681L1433.572,967.871L1530.463,967.871z" Height="90" Stretch="Fill" Width="200" HorizontalAlignment="Right" Margin="0" VerticalAlignment="Top">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    				<GradientStop Color="#FF065D8E" Offset="0"/>
+    				<GradientStop Color="#FF49FFDD" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Path Data="F1M1636.127,981.964L1546.717,981.964L1531.241,967.063L1530.914,966.748L1530.463,966.748L1434.694,966.748L1434.694,911.805L1576.824,911.805L1577.275,911.805L1577.604,911.49L1597.072,892.741L1636.127,892.741z" Height="88" Stretch="Fill" Width="198" HorizontalAlignment="Right" Margin="0,1,1,0" VerticalAlignment="Top">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    				<GradientStop Color="#FF0077BF" Offset="0"/>
+    				<GradientStop Color="sc#1, 0, 0.1353423, 0.386439025" Offset="0.038555224400624866"/>
+    				<GradientStop Color="sc#1, 0, 0.09297685, 0.2704155" Offset="0.086033427079321712"/>
+    				<GradientStop Color="sc#1, 0, 0.0587218255, 0.176603466" Offset="0.15008604639504597"/>
+    				<GradientStop Color="sc#1, 0, 0.0353899, 0.112705827" Offset="0.26121623945613237"/>
+    				<GradientStop Color="sc#1, 0, 0.030713439, 0.0998987257" Offset="0.517989993095398"/>
+    				<GradientStop Color="#FF003159" Offset="0.517989993095398"/>
+    				<GradientStop Color="#FF000009" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+    	<Grid Margin="4,29,4,34">
+    		<Path Data="F1M1631.733,956.823L1629.727,956.823L1441.098,956.823L1439.091,956.823L1439.091,954.816L1439.091,921.706L1439.091,919.699L1441.098,919.699L1629.727,919.699L1631.733,919.699L1631.733,921.706L1631.733,954.816z" Stretch="Fill" Width="192" HorizontalAlignment="Center" Height="37" VerticalAlignment="Top">
+    			<Path.Fill>
+    				<LinearGradientBrush EndPoint="-0.06,0.5" StartPoint="0.74,0.5">
+    					<GradientStop Color="#FF065D8E" Offset="0"/>
+    					<GradientStop Color="Black" Offset="1"/>
+    				</LinearGradientBrush>
+    			</Path.Fill>
+    		</Path>
+    		<Path Data="M1629.726,954.817L1441.097,954.817L1441.097,921.707L1629.726,921.707z" Height="33" Stretch="Fill" Width="188" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center">
+    			<Path.Fill>
+    				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    					<GradientStop Color="#FF000B13" Offset="0"/>
+    					<GradientStop Color="#FF000009" Offset="1"/>
+    				</LinearGradientBrush>
+    			</Path.Fill>
+    		</Path>
+    		<TextBlock x:Name="SelectText" Margin="0" TextWrapping="Wrap" Text="N/A" Foreground="#FFFDBC0F" FontFamily="Digital dream Fat" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18.667"/>
+            
+    	</Grid>
+    	<Grid x:Name="BeforeButton" HorizontalAlignment="Right" Height="18" Margin="0,9,4,0" VerticalAlignment="Top" Width="18" Cursor="Hand" MouseEnter="BeforeButton_MouseEnter" MouseLeave="BeforeButton_MouseLeave" MouseLeftButtonDown="BeforeButton_MouseLeftButtonDown" MouseLeftButtonUp="BeforeButton_MouseLeftButtonUp">
+    		<Path x:Name="BeforeButtonPath" Data="M1630.061,916.711L1612,916.711L1612,898.651L1630.061,898.651z" StrokeStartLineCap="Flat" Stretch="Fill" StrokeEndLineCap="Flat" Stroke="White" StrokeThickness="0.668" StrokeMiterLimit="4" StrokeLineJoin="Miter">
+    			<Path.Fill>
+    				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    					<GradientStop Color="#FF1E445B" Offset="0"/>
+    					<GradientStop Color="#FF051019" Offset="1"/>
+    				</LinearGradientBrush>
+    			</Path.Fill>
+    		</Path>
+    		<Path x:Name="path" Data="F1M1618.1035,911.3184L1621.0305,908.3914L1623.9575,911.3184L1628.3045,911.3184L1621.0305,904.0444L1613.7565,911.3184z" Fill="#FF03F5FB" Stretch="Fill" Margin="0" Width="13" Height="6.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            
+    	</Grid>
+    	<Grid x:Name="NextButton" HorizontalAlignment="Right" Height="18" Margin="0,0,4,14" VerticalAlignment="Bottom" Width="18" Cursor="Hand" MouseEnter="NextButton_MouseEnter" MouseLeave="NextButton_MouseLeave" MouseLeftButtonDown="NextButton_MouseLeftButtonDown" MouseLeftButtonUp="NextButton_MouseLeftButtonUp">
+    		<Path x:Name="NextButtonPath" Data="M1612.652,959.103L1630.714,959.103L1630.714,977.164L1612.652,977.164z" StrokeStartLineCap="Flat" Stretch="Fill" StrokeEndLineCap="Flat" Stroke="White" StrokeThickness="0.668" StrokeMiterLimit="4" StrokeLineJoin="Miter">
+    			<Path.Fill>
+    				<LinearGradientBrush EndPoint="0,0.5" StartPoint="1,0.5">
+    					<GradientStop Color="#FF1E445B" Offset="1"/>
+    					<GradientStop Color="#FF051019"/>
+    				</LinearGradientBrush>
+    			</Path.Fill>
+    		</Path>
+    		<Path x:Name="path1" Data="F1M1624.6094,964.4951L1621.6834,967.4221L1618.7554,964.4951L1614.4094,964.4951L1621.6834,971.7701L1628.9574,964.4951z" Fill="#FF03F5FB" Stretch="Fill" Margin="0" Width="13" Height="6.5" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            
+    	</Grid>
+    	<Grid Height="16" Margin="0,0,55,0" VerticalAlignment="Top">
+    		<Path Data="F1M1449.124,891.6167L1432.904,907.8377L1562,907.8377L1578.221,891.6167z" Fill="#FF03F5FB" Opacity="0.25" Stretch="Fill" Width="145" HorizontalAlignment="Left"/>
+    		<TextBlock x:Name="TitleText" TextWrapping="Wrap" Text="Combo Box" Foreground="White" FontFamily="Microsoft YaHei" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center"/>
+            
+    	</Grid>
+            
+    </Grid>
+</UserControl>

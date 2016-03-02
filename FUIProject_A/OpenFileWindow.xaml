@@ -1,0 +1,87 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:FUIProject_A_Controls_SimpleControls="clr-namespace:FUIProject_A.Controls.SimpleControls" x:Class="FUIProject_A.OpenFileWindow"
+        Title="OpenFileWindow" Height="340" Width="560" ResizeMode="NoResize" WindowStyle="None" Background="{x:Null}" AllowsTransparency="True">
+	<Window.Resources>
+		<Storyboard x:Key="ButtonEnterAction" Storyboard.TargetName="GoBackButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.2" Value="Cyan"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="ButtonLeaveAction" Storyboard.TargetName="GoBackButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF15AFAB"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="ButtonClickAction" Storyboard.TargetName="GoBackButtonPath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.1" Value="#FFFFBC00"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+		</EventTrigger>
+	</Window.Triggers>
+    <Grid Margin="10">
+    	<Grid.Effect>
+    		<DropShadowEffect BlurRadius="7" ShadowDepth="7"/>
+    	</Grid.Effect>
+    	<Path Data="F1M562.598,305.976L562.598,16.799L22.598,16.799L22.598,336.799L531.774,336.799z" Stretch="Fill">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    				<GradientStop Color="#FF1287AA" Offset="0"/>
+    				<GradientStop Color="#FF080B0C" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+        
+    	<Path Data="F1M22.598,58.777L22.598,336.799L531.774,336.799L562.598,305.473L562.598,58.777z" Stretch="Fill" Margin="0,42,0,0">
+    		<Path.Fill>
+    			<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+    				<GradientStop Color="#FF0B546A" Offset="0"/>
+    				<GradientStop Color="#FF080B0C" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Path.Fill>
+    	</Path>
+        
+    	<Path Data="F1M556.5957,303.4912L529.2907,330.7972L28.5987,330.7972L28.5987,22.8002000000001L556.5957,22.8002000000001z M22.5976999999999,16.7992L22.5976999999999,336.7992L531.7747,336.7992L562.5977,305.9752L562.5977,16.7992z" Fill="#FF006D82" Stretch="Fill"/>
+        
+    	<TextBlock HorizontalAlignment="Left" Margin="20,0,0,25" TextWrapping="Wrap" Text="文件名" Foreground="White" VerticalAlignment="Bottom" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="20,15,0,0" TextWrapping="Wrap" Text="查找范围" Foreground="White" VerticalAlignment="Top" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+    	<Grid x:Name="TitleGrid" Height="36" Margin="6,6,6,0" VerticalAlignment="Top" Background="#00000000" MouseMove="TitleGrid_MouseMove" MouseLeftButtonDown="TitleGrid_MouseLeftButtonDown"/>
+    	<Grid Height="25" Margin="70,273.99,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180">
+    		<Rectangle Stroke="#FF00D1FA">
+    			<Rectangle.Fill>
+    				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    					<GradientStop Color="#FF002531" Offset="0"/>
+    					<GradientStop Color="#FF00495D" Offset="1"/>
+    				</LinearGradientBrush>
+    			</Rectangle.Fill>
+    		</Rectangle>
+    		<Grid Margin="3" ClipToBounds="True">
+    			<TextBox x:Name="FileNameText" Margin="-2" TextWrapping="Wrap" FontFamily="/FUIProject_A;component/FontFolder/#Microsoft YaHei" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="Gray" FontSize="14.667" Padding="2,0,2,2"/>
+    		</Grid>
+    	</Grid>
+        
+    	<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="OpenFileButton" Height="30" Margin="260,0,0,20" VerticalAlignment="Bottom" Width="120" ButtonStr="打 开" HorizontalAlignment="Left" MouseLeftButtonUp="OpenFileButton_MouseLeftButtonUp"/>
+    	<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="CloseButton" Height="30" Margin="390,0,0,20" VerticalAlignment="Bottom" Width="120" ButtonStr="取 消" HorizontalAlignment="Left" MouseLeftButtonUp="CloseButton_MouseLeftButtonUp"/>
+    	<Grid Margin="20,50,20,60">
+    		<Path Data="M542.598,259.11L42.598,259.11L42.598,69.11L542.598,69.11z" Fill="White" StrokeStartLineCap="Flat" Stretch="Fill" StrokeEndLineCap="Flat" Stroke="#FF070707" StrokeThickness="1" StrokeMiterLimit="4" StrokeLineJoin="Miter"/>
+    		<Grid x:Name="FileContentGrid" Margin="10,5,10,25" ClipToBounds="True" Background="#00000000" MouseWheel="FileContentGrid_MouseWheel">
+    			<WrapPanel x:Name="FileDocumentItemWrapPanel" Orientation="Vertical" HorizontalAlignment="Left"/>
+    		</Grid>
+    		<ScrollBar x:Name="FileContentScrollBar" Height="20" Margin="2,0,2,2" VerticalAlignment="Bottom" Orientation="Horizontal" Maximum="3" SmallChange="1" ViewportSize="1" ValueChanged="FileContentScrollBar_ValueChanged"/>
+    	</Grid>
+    	<FUIProject_A_Controls_SimpleControls:ComboBoxType2 x:Name="DirectoryPathComboBox" Height="25" Margin="80,12,0,0" VerticalAlignment="Top" Width="380" HorizontalAlignment="Left" Background="#00000000"/>
+    	<Grid x:Name="GoBackButton" HorizontalAlignment="Right" Height="25" Margin="0,12,50,0" VerticalAlignment="Top" Width="25" Background="#00000000" MouseLeftButtonUp="GoBackButton_MouseLeftButtonUp" MouseLeftButtonDown="GoBackButton_MouseLeftButtonDown" MouseEnter="GoBackButton_MouseEnter" MouseLeave="GoBackButton_MouseLeave" Cursor="Hand">
+    		<Path x:Name="GoBackButtonPath" Data="F1M395.5049,41.1104L386.3409,41.1104L386.3409,38.7774L379.5049,42.7774L386.3409,46.7774L386.3409,44.4434L395.5049,44.4434z" Fill="#FF15AFAB" Stretch="Fill" Width="16" Height="8" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    	</Grid>
+    	<Grid x:Name="GoUpButton" HorizontalAlignment="Right" Height="25" Margin="0,12,20,0" VerticalAlignment="Top" Width="25" Background="#00000000" MouseLeftButtonUp="GoUpButton_MouseLeftButtonUp" MouseLeftButtonDown="GoUpButton_MouseLeftButtonDown" MouseEnter="GoUpButton_MouseEnter" MouseLeave="GoUpButton_MouseLeave" Cursor="Hand">
+    		<Path x:Name="GoUpButtonPath" Data="F1M418.7842,46.7891L408.6412,46.7891L408.6412,42.7311L407.2602,42.7311L409.3702,39.0781L411.4792,42.7311L409.9292,42.7311L409.9292,45.5011L418.7842,45.5011z M414.3062,38.9331L413.0032,36.9401L405.5052,36.9401L405.5052,38.9331L405.5052,41.8761L405.5052,48.6141L420.8822,48.6141L420.8822,38.9331z" Fill="#FF15AFAB" Stretch="Fill" Width="15" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+    	</Grid>
+        
+    </Grid>
+</Window>

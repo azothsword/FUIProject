@@ -1,0 +1,293 @@
+﻿<UserControl x:Class="FUIProject_B.Controls.SimpleControls.PortStatePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="465" Height="30">
+	<UserControl.Resources>
+		<Storyboard x:Key="EffectAction" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle6">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle12">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle18">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle24">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="18"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle1">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle7">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle13">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle19">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle25">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle2">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle8">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle14">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle20">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle26">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle3">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle9">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle15">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle21">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle27">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle4">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle10">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle16">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle22">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="10"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle5">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle11">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle17">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="rectangle23">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.0" Value="18"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="14"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="AbleStateAction">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle1">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle2">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle3">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle4">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle5">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle6">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle7">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle8">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle9">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle10">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle11">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle12">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle13">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle14">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle15">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle16">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle17">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle18">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle19">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle20">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle21">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle22">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle23">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle24">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle25">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle26">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="rectangle27">
+				<EasingColorKeyFrame KeyTime="0:0:0.3" Value="Lime"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource EffectAction}"/>
+		</EventTrigger>
+	</UserControl.Triggers>
+    <Grid Height="30" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="465">
+		<Path Data="F1M1158.3906,850.0098L1128.9446,879.4508L1363.2586,879.4508L1392.7006,850.0098z" Fill="#FF03F5FB" Opacity="0.25" Stretch="Fill" Width="260" HorizontalAlignment="Left" d:LayoutOverrides="Width"/>
+		<Path Data="F1M1566.713,879.451L1229.701,879.451L1259.701,849.451L1596.713,849.451z" Stretch="Fill" HorizontalAlignment="Right" Width="365">
+			<Path.Fill>
+				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+					<GradientStop Color="#FF00FFFB" Offset="0"/>
+					<GradientStop Color="#FF00162E" Offset="1"/>
+				</LinearGradientBrush>
+			</Path.Fill>
+		</Path>
+		<Path Data="F1M1565.884,877.451L1234.532,877.451L1260.531,851.453L1591.883,851.453z" Stretch="Fill" Margin="0,2,5,0" Height="26" HorizontalAlignment="Right" VerticalAlignment="Top" Width="355">
+			<Path.Fill>
+				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+					<GradientStop Color="#FF000B13" Offset="0"/>
+					<GradientStop Color="#FF000009" Offset="1"/>
+				</LinearGradientBrush>
+			</Path.Fill>
+		</Path>
+		<TextBlock HorizontalAlignment="Left" Margin="25,0,0,0" TextWrapping="Wrap" Text="COM1" VerticalAlignment="Center" FontFamily="Microsoft YaHei" Foreground="White" FontSize="16"/>
+		<Path Data="F1M1226.7168,862.563L1223.7898,865.49L1220.8628,862.563L1216.5158,862.563L1223.7898,869.837L1231.0638,862.563z" Fill="#FF15AEAA" Stretch="Fill" Width="14" HorizontalAlignment="Left" Margin="90,0,0,0" VerticalAlignment="Center" Height="7"/>
+		<Rectangle HorizontalAlignment="Left" Margin="140,8,0,8" Width="4" Height="16" VerticalAlignment="Center">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+					<GradientStop Color="#FF000B13" Offset="0"/>
+					<GradientStop Color="#FF000009" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Grid HorizontalAlignment="Left" Margin="145,0,0,0" Width="280" Height="18" VerticalAlignment="Center">
+			<Rectangle x:Name="rectangle" HorizontalAlignment="Left" Margin="0" Width="7" Height="18" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Margin="10,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Margin="20,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Margin="30,0,0,0" Width="7" Height="6" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Margin="40,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle5" HorizontalAlignment="Left" Margin="50,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle6" HorizontalAlignment="Left" Margin="60,0,0,0" Width="7" Height="18" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle7" HorizontalAlignment="Left" Margin="70,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle8" HorizontalAlignment="Left" Margin="80,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle9" HorizontalAlignment="Left" Margin="90,0,0,0" Width="7" Height="6" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle10" HorizontalAlignment="Left" Margin="100,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle11" HorizontalAlignment="Left" Margin="110,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle12" HorizontalAlignment="Left" Margin="120,0,0,0" Width="7" Height="18" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle13" HorizontalAlignment="Left" Margin="130,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle14" HorizontalAlignment="Left" Margin="140,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle15" HorizontalAlignment="Left" Margin="150,0,0,0" Width="7" Height="6" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle16" HorizontalAlignment="Left" Margin="160,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle17" HorizontalAlignment="Left" Margin="170,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle18" HorizontalAlignment="Left" Margin="180,0,0,0" Width="7" Height="18" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle19" HorizontalAlignment="Left" Margin="190,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Margin="200,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle21" HorizontalAlignment="Left" Margin="210,0,0,0" Width="7" Height="6" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle22" HorizontalAlignment="Left" Margin="220,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle23" HorizontalAlignment="Left" Margin="230,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle24" HorizontalAlignment="Left" Margin="240,0,0,0" Width="7" Height="18" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle25" HorizontalAlignment="Left" Margin="250,0,0,0" Width="7" Height="14" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle26" HorizontalAlignment="Left" Margin="260,0,0,0" Width="7" Height="10" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+			<Rectangle x:Name="rectangle27" HorizontalAlignment="Left" Margin="270,0,0,0" Width="7" Height="6" VerticalAlignment="Center" Fill="Yellow" Stroke="Yellow"/>
+		</Grid>
+        
+	</Grid>
+</UserControl>

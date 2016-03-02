@@ -1,0 +1,360 @@
+﻿<UserControl x:Class="FUIProject.Controls.SimpleControls.TitlePortStateScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="190" Height="30">
+	<UserControl.Resources>
+		<Storyboard x:Key="EffectAction" RepeatBehavior="Forever">
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle">
+				<EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle7">
+				<EasingThicknessKeyFrame KeyTime="0" Value="40,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="40,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="40,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="40,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="40,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle13">
+				<EasingThicknessKeyFrame KeyTime="0" Value="80,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="80,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="80,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="80,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="80,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle19">
+				<EasingThicknessKeyFrame KeyTime="0" Value="120,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="120,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="120,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="120,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="120,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle25">
+				<EasingThicknessKeyFrame KeyTime="0" Value="160,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="160,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="160,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="160,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="160,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle6">
+				<EasingThicknessKeyFrame KeyTime="0" Value="5,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="5,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="5,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="5,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="5,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="5,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle12">
+				<EasingThicknessKeyFrame KeyTime="0" Value="45,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="45,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="45,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="45,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="45,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="45,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle18">
+				<EasingThicknessKeyFrame KeyTime="0" Value="85,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="85,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="85,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="85,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="85,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="85,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle24">
+				<EasingThicknessKeyFrame KeyTime="0" Value="125,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="125,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="125,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="125,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="125,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="125,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle30">
+				<EasingThicknessKeyFrame KeyTime="0" Value="165,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="165,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="165,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="165,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="165,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="165,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle11">
+				<EasingThicknessKeyFrame KeyTime="0" Value="10,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="10,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="10,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="10,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="10,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="10,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle17">
+				<EasingThicknessKeyFrame KeyTime="0" Value="50,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="50,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="50,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="50,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="50,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="50,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle23">
+				<EasingThicknessKeyFrame KeyTime="0" Value="90,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="90,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="90,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="90,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="90,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="90,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle29">
+				<EasingThicknessKeyFrame KeyTime="0" Value="130,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="130,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="130,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="130,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="130,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="130,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle35">
+				<EasingThicknessKeyFrame KeyTime="0" Value="170,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="170,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="170,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="170,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="170,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="170,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle16">
+				<EasingThicknessKeyFrame KeyTime="0" Value="15,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="15,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="15,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="15,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="15,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle22">
+				<EasingThicknessKeyFrame KeyTime="0" Value="55,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="55,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="55,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="55,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="55,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle28">
+				<EasingThicknessKeyFrame KeyTime="0" Value="95,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="95,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="95,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="95,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="95,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle34">
+				<EasingThicknessKeyFrame KeyTime="0" Value="135,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="135,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="135,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="135,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="135,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle5">
+				<EasingThicknessKeyFrame KeyTime="0" Value="175,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="175,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="175,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="175,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="175,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle21">
+				<EasingThicknessKeyFrame KeyTime="0" Value="20,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="20,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="20,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="20,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="20,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle27">
+				<EasingThicknessKeyFrame KeyTime="0" Value="60,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="60,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="60,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="60,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="60,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle33">
+				<EasingThicknessKeyFrame KeyTime="0" Value="100,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="100,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="100,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="100,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="100,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle4">
+				<EasingThicknessKeyFrame KeyTime="0" Value="140,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="140,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="140,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="140,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="140,6,0,6"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle26">
+				<EasingThicknessKeyFrame KeyTime="0" Value="25,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="25,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="25,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="25,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="25,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="25,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle32">
+				<EasingThicknessKeyFrame KeyTime="0" Value="65,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="65,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="65,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="65,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="65,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="65,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle3">
+				<EasingThicknessKeyFrame KeyTime="0" Value="105,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="105,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="105,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="105,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="105,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="105,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle10">
+				<EasingThicknessKeyFrame KeyTime="0" Value="145,4,0,4"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="145,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="145,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="145,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.4" Value="145,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="145,4,0,4"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle31">
+				<EasingThicknessKeyFrame KeyTime="0" Value="30,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="30,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="30,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="30,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="30,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="30,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle2">
+				<EasingThicknessKeyFrame KeyTime="0" Value="70,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="70,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="70,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="70,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="70,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="70,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle9">
+				<EasingThicknessKeyFrame KeyTime="0" Value="110,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="110,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="110,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="110,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="110,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="110,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle15">
+				<EasingThicknessKeyFrame KeyTime="0" Value="150,2,0,2"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="150,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="150,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="150,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.2" Value="150,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="150,2,0,2"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle1">
+				<EasingThicknessKeyFrame KeyTime="0" Value="35,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="35,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="35,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="35,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="35,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle8">
+				<EasingThicknessKeyFrame KeyTime="0" Value="75,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="75,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="75,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="75,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="75,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle14">
+				<EasingThicknessKeyFrame KeyTime="0" Value="115,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="115,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="115,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="115,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="115,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle20">
+				<EasingThicknessKeyFrame KeyTime="0" Value="155,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="155,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:0.8" Value="155,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="155,6,0,6"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1.6" Value="155,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+			
+		</Storyboard>
+	</UserControl.Resources>
+	<UserControl.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+		</EventTrigger>
+	</UserControl.Triggers>
+    <Grid Margin="0" ClipToBounds="True" Height="30" VerticalAlignment="Bottom">
+		<Rectangle Stroke="Black" StrokeThickness="0" Fill="#FF126695"/>
+		<Rectangle Stroke="Black" StrokeThickness="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="Black" Offset="0"/>
+					<GradientStop Color="#00858585" Offset="0.078"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle Stroke="Black" StrokeThickness="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+					<GradientStop Color="#FF121212" Offset="0"/>
+					<GradientStop Color="#00606060" Offset="0.011"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle Stroke="Black" StrokeThickness="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+					<GradientStop Color="#FF2F2F2F" Offset="1"/>
+					<GradientStop Color="#00787878" Offset="0.989"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Rectangle Stroke="Black" StrokeThickness="0">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FF2F2F2F" Offset="1"/>
+					<GradientStop Color="#00787878" Offset="0.963"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Grid x:Name="StateGrid" Margin="5,7">
+			<Rectangle x:Name="rectangle" HorizontalAlignment="Left" Margin="0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle6" HorizontalAlignment="Left" Margin="5,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle11" HorizontalAlignment="Left" Margin="10,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle16" HorizontalAlignment="Left" Margin="15,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle21" HorizontalAlignment="Left" Margin="20,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle26" HorizontalAlignment="Left" Margin="25,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle31" HorizontalAlignment="Left" Margin="30,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle1" HorizontalAlignment="Left" Margin="35,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle7" HorizontalAlignment="Left" Margin="40,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle12" HorizontalAlignment="Left" Margin="45,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle17" HorizontalAlignment="Left" Margin="50,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle22" HorizontalAlignment="Left" Margin="55,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle27" HorizontalAlignment="Left" Margin="60,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle32" HorizontalAlignment="Left" Margin="65,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle2" HorizontalAlignment="Left" Margin="70,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle8" HorizontalAlignment="Left" Margin="75,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle13" HorizontalAlignment="Left" Margin="80,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray" d:LayoutOverrides="HorizontalAlignment"/>
+			<Rectangle x:Name="rectangle18" HorizontalAlignment="Left" Margin="85,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray" d:LayoutOverrides="HorizontalAlignment"/>
+			<Rectangle x:Name="rectangle23" HorizontalAlignment="Left" Margin="90,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle28" HorizontalAlignment="Left" Margin="95,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle33" HorizontalAlignment="Left" Margin="100,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle3" HorizontalAlignment="Left" Margin="105,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle9" HorizontalAlignment="Left" Margin="110,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle14" HorizontalAlignment="Left" Margin="115,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle19" HorizontalAlignment="Left" Margin="120,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle24" HorizontalAlignment="Left" Margin="125,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle29" HorizontalAlignment="Left" Margin="130,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle34" HorizontalAlignment="Left" Margin="135,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle4" HorizontalAlignment="Left" Margin="140,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle10" HorizontalAlignment="Left" Margin="145,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle15" HorizontalAlignment="Left" Margin="150,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle20" HorizontalAlignment="Left" Margin="155,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle25" HorizontalAlignment="Left" Margin="160,0,0,0" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle30" HorizontalAlignment="Left" Margin="165,2,0,2" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle35" HorizontalAlignment="Left" Margin="170,4,0,4" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+			<Rectangle x:Name="rectangle5" HorizontalAlignment="Left" Margin="175,6,0,6" Stroke="Black" StrokeThickness="0" Width="3" Fill="Gray"/>
+		</Grid>
+	</Grid>
+</UserControl>

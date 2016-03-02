@@ -1,0 +1,403 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:FUIProject_A_Controls_SimpleControls="clr-namespace:FUIProject_A.Controls.SimpleControls" mc:Ignorable="d" x:Class="FUIProject_A.MainWindow"
+        Title="FUIProject_A" Height="820" Width="600" WindowStyle="None" ResizeMode="NoResize" Background="{x:Null}" AllowsTransparency="True" KeyDown="Window_KeyDown">
+	<Window.Resources>
+		<Storyboard x:Key="ButtonShowAction">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandContentGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandSetGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="CommandContentGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="CommandSetGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ButtonContentGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ButtonContentGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ComboBoxGrid1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ComboBoxGrid1">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ComboBoxGrid2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ComboBoxGrid2">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="ButtonHideAction">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandContentGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandSetGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="CommandContentGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="CommandSetGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ComboBoxGrid1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ComboBoxGrid1">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Collapsed}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.6" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ComboBoxGrid2">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ComboBoxGrid2">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="ButtonContentGrid">
+				<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="ButtonContentGrid">
+				<DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.4" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="CloseMinButtonMouseEnterAction" Storyboard.TargetName="ClosePath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF00FFF8"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="CloseMinButtonMouseLeaveAction" Storyboard.TargetName="ClosePath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF15AFAB"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="CloseMinButtonMouseLeftButtonDownAction" Storyboard.TargetName="ClosePath">
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)">
+				<EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FFFF8A0C"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="TitleEffectAction" RepeatBehavior="Forever">
+			<ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="EffectRect1">
+				<EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:1" Value="250,0,0,0"/>
+				<EasingThicknessKeyFrame KeyTime="0:0:2" Value="250,0,0,0"/>
+			</ThicknessAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource TitleEffectAction}"/>
+		</EventTrigger>
+	</Window.Triggers>
+    <Grid HorizontalAlignment="Center" Width="580" Height="800" VerticalAlignment="Center">
+    	<Grid.Effect>
+    		<DropShadowEffect BlurRadius="7" ShadowDepth="7"/>
+    	</Grid.Effect>
+		<Grid x:Name="ContentGrid" MouseLeftButtonDown="ContentGrid_MouseLeftButtonDown">
+			<Rectangle Margin="0" Stroke="Black" StrokeThickness="0">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+						<GradientStop Color="#FF006D82" Offset="0"/>
+						<GradientStop Color="#FF03D7FF" Offset="0.424"/>
+						<GradientStop Color="#FF03D7FF" Offset="0.546"/>
+						<GradientStop Color="#FF006D82" Offset="1"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Grid Margin="5" ClipToBounds="True">
+				<Rectangle Margin="0" Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.886,0.904" StartPoint="0.06,0.039">
+    						<GradientStop Color="#FF031E25" Offset="0"/>
+    						<GradientStop Color="#FF080B0C" Offset="1"/>
+    					</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Path Data="M589.6,808.599L9.60000000000002,808.599L9.60000000000002,28.599L589.6,28.599z" Stretch="Fill" Margin="0">
+					<Path.Fill>
+						<LinearGradientBrush EndPoint="0.886,0.904" StartPoint="0.06,0.039">
+							<GradientStop Color="#FF031E25" Offset="0"/>
+							<GradientStop Color="#FF080B0C" Offset="1"/>
+						</LinearGradientBrush>
+					</Path.Fill>
+				</Path>
+				<Image Margin="0" Source="Image/BackGroundImage.png" Stretch="Fill" Opacity="0.42"/>
+				<Grid x:Name="TitleGrid" Height="40" Margin="0,8,75,0" VerticalAlignment="Top" MouseMove="TitleGrid_MouseMove">
+					<Path Data="M0,0 L19.999996,0 103,0 515,0 515,2.0000004 477,39.999993 103,39.999993 19.999996,39.999993 0,39.999993 z" Margin="-20,0,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="0">
+						<Path.Effect>
+							<DropShadowEffect/>
+						</Path.Effect>
+						<Path.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF041921"/>
+								<GradientStop Color="#FF004D62" Offset="1"/>
+							</LinearGradientBrush>
+						</Path.Fill>
+					</Path>
+					<Grid HorizontalAlignment="Left" Margin="-50,6,0,6" Width="300">
+						<Rectangle Stroke="Black" StrokeThickness="0" Fill="Orange"/>
+						<Rectangle x:Name="EffectRect1" HorizontalAlignment="Left" Margin="0" Stroke="Black" StrokeThickness="0" Width="50">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+									<GradientStop Color="#00FFD280"/>
+									<GradientStop Color="#FFFFE2AE" Offset="0.383"/>
+									<GradientStop Color="#FFFFE2AE" Offset="0.636"/>
+									<GradientStop Offset="1" Color="#00FFD280"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+					</Grid>
+					<Path Data="M111.73267,25.561438 L115.1574,25.561438 115.1574,26.503311 111.73267,26.503311 z M127.19306,25.225903 C126.96561,26.152069 126.59489,27.185181 126.08488,28.323269 L127.91048,29.010056 C128.33531,27.987732 128.70404,26.881035 129.01965,25.688982 z M137.09253,24.921757 L135.38016,25.401518 135.90118,26.854548 C135.298,26.641646 134.70584,26.407158 134.12369,26.152067 134.01549,26.99877 133.88121,27.515816 133.7209,27.705174 133.56058,27.893545 133.28705,27.987732 132.90028,27.987734 L132.23198,27.987734 C131.53661,27.987732 131.18793,27.706152 131.18793,27.14201 L131.18793,25.273974 129.19901,25.273974 129.19901,27.589403 C129.19901,29.036543 129.98155,29.760603 131.54762,29.760605 L133.22792,29.760605 C133.82509,29.760603 134.34613,29.626192 134.78799,29.357361 135.23186,29.088541 135.63266,28.337008 135.99136,27.101784 136.19276,27.703209 136.37411,28.281084 136.53743,28.834433 L138.2989,28.307575 C137.98428,27.264652 137.58148,26.13637 137.09253,24.921757 z M174.89484,24.587189 L177.32462,24.587189 177.32462,26.790775 174.89484,26.966389 z M109.77583,24.220259 L109.77583,28.339953 111.73267,28.339953 111.73267,27.84449 117.11425,27.84449 117.11425,24.220259 z M147.98595,23.788569 L151.76938,23.788569 151.76938,25.353447 147.98595,25.353447 z M141.78876,23.788569 L145.63733,23.788569 145.63733,25.353447 141.78876,25.353447 z M126.81832,22.910467 L126.81832,24.60289 131.39232,24.60289 C131.65283,25.375027 131.87927,26.114786 132.06865,26.82217 L133.94434,26.231541 C133.74294,25.673285 133.52852,25.129748 133.30107,24.60289 L138.08649,24.60289 138.08649,22.910467 z M106.2048,21.920532 L106.2048,29.79299 108.35704,29.79299 108.35704,23.516806 118.5661,23.516806 118.5661,27.014475 C118.5661,27.706156 118.20139,28.052488 117.47295,28.052488 116.76656,28.052488 116.10326,28.025017 115.48405,27.97204 115.64737,28.568554 115.78764,29.190582 115.90688,29.841061 117.48398,29.841061 118.52803,29.796909 119.03803,29.708605 119.54903,29.62129 119.95683,29.370125 120.26144,28.954134 120.56603,28.539122 120.71834,27.950453 120.71834,27.190088 L120.71834,21.920532 z M174.89484,20.691195 L177.32462,20.691195 177.32462,22.894774 174.89484,22.894774 z M134.5325,19.317631 L135.77193,19.317631 135.77193,20.691195 134.5325,20.691195 z M131.8412,19.316649 L133.06461,19.316649 133.06461,20.690212 131.8412,20.690212 z M129.1499,19.316649 L130.37331,19.316649 130.37331,20.690212 129.1499,20.690212 z M109.93815,19.030167 L116.95093,19.030167 116.95093,19.861164 109.93815,19.861164 z M74.097687,18.538626 L75.418282,18.538626 C76.249916,18.538628 76.82605,18.73485 77.147682,19.127299 77.468315,19.518761 77.628632,20.053467 77.628632,20.73044 77.628632,21.873432 77.351082,23.020355 76.793991,24.170223 76.236893,25.320084 75.391228,25.895018 74.252991,25.895016 L72.537621,25.895016 z M159.01059,17.720383 L168.02933,17.720383 168.02933,26.152075 159.01059,26.152075 z M107.75385,17.656603 L107.75385,21.233746 119.13622,21.233746 119.13622,17.656603 z M147.98595,17.529068 L151.15015,17.529068 151.15015,19.030167 147.98595,19.030167 z M142.40897,17.529068 L145.63832,17.529068 145.63832,19.030167 142.40897,19.030167 z M174.89484,16.795185 L177.32462,16.795185 177.32462,18.998764 174.89484,18.998764 z M70.547707,15.637479 L67.730171,28.805002 74.813095,28.805002 C75.766968,28.805 76.769936,28.591118 77.821007,28.163357 78.87307,27.734606 79.783859,26.853565 80.555382,25.518271 81.325897,24.181994 81.710648,22.727001 81.710648,21.152315 81.710648,19.511892 81.261772,18.182484 80.362999,17.164087 79.463234,16.145693 78.032425,15.637475 76.068565,15.637479 z M85.19651,15.636497 L82.325867,28.80402 93.874565,28.80402 94.535866,25.804753 87.132317,25.804753 87.700432,23.226387 94.269348,23.226387 94.874535,20.558739 88.2976,20.558739 88.74649,18.466021 95.571899,18.466021 96.186111,15.636497 z M63.483822,15.636497 L60.603157,28.80402 64.813438,28.80402 67.694099,15.636497 z M47.659718,15.636497 L46.274994,22.013733 C46.109669,22.762324 46.026505,23.547215 46.026508,24.367426 46.026505,25.013979 46.133717,25.620308 46.348137,26.185427 46.562561,26.752512 46.904232,27.256806 47.375153,27.699288 47.846081,28.142752 48.42522,28.47535 49.114574,28.697083 49.801929,28.917832 50.720734,29.028696 51.870995,29.028696 53.943069,29.028696 55.505138,28.584253 56.557205,27.695366 57.609276,26.805493 58.340714,25.432915 58.750523,23.576647 L60.49295,15.636497 56.300705,15.636497 54.768696,22.822169 C54.524212,23.960264 54.167507,24.726513 53.700592,25.121905 53.232674,25.517292 52.664555,25.714495 51.998245,25.714491 50.73877,25.714495 50.109531,25.193524 50.109535,24.151575 50.109531,23.762077 50.145603,23.394161 50.218746,23.04685 L51.832924,15.636497 z M156.5648,15.532498 L156.5648,29.473141 159.01059,29.473141 159.01059,28.339953 168.02933,28.339953 168.02933,29.473141 170.47516,29.473141 170.47516,15.532498 z M38.284286,15.411822 C36.658089,15.411822 35.216255,15.75521 33.959785,16.440027 32.702312,17.125826 31.728397,18.088297 31.038042,19.328428 30.34668,20.567572 30,21.93034 29.999998,23.414763 30,25.193527 30.543068,26.573954 31.629202,27.556051 32.714336,28.538141 34.183224,29.029679 36.036865,29.029679 38.091908,29.029679 40.164982,28.520485 42.256092,27.502087 L43.605743,21.313227 37.33041,21.313227 36.72422,24.062304 39.266212,24.062304 38.963619,25.472159 C38.314342,25.903855 37.562866,26.118719 36.707184,26.118715 L36.670109,26.118715 C35.917633,26.118719 35.299419,25.871473 34.812454,25.377974 34.326504,24.883494 34.083027,24.271279 34.083027,23.541325 34.083027,22.277659 34.410671,21.091492 35.06395,19.983812 35.719242,18.876133 36.604984,18.321806 37.724186,18.321802 38.868435,18.321806 39.626926,18.842776 39.999664,19.884716 L44.090702,19.445183 C43.400345,16.755947 41.464535,15.411822 38.284286,15.411822 z M203.33675,14.590624 C200.23764,14.825113 195.72578,14.979147 189.80113,15.05371 190.03961,15.926903 190.21896,16.645077 190.33919,17.209219 L196.03038,17.025746 196.03038,18.901642 190.02859,18.901642 190.02859,21.010054 196.03038,21.010054 196.03038,22.926169 188.83824,22.926169 188.83824,25.081677 196.03038,25.081677 196.03038,26.311005 C196.03038,27.098843 195.64462,27.493252 194.87212,27.493254 194.2639,27.493252 193.3992,27.450083 192.28,27.364729 192.45334,28.068184 192.6387,28.871716 192.83409,29.776306 194.89413,29.73902 196.05843,29.697813 196.32796,29.652683 196.5965,29.60755 196.92613,29.483931 197.3149,29.281826 197.70366,29.078732 197.99724,28.778509 198.19562,28.379198 198.39403,27.979883 198.49323,27.525627 198.49323,27.014467 L198.49323,25.081677 205,25.081677 205,22.926169 198.49323,22.926169 198.49323,21.010054 203.8257,21.010054 203.8257,18.901642 198.49323,18.901642 198.49323,16.937449 204.05414,16.698063 z M131.35123,14.19131 L131.35123,15.420647 127.14397,15.420647 127.14397,17.049297 131.35123,17.049297 131.35123,17.864601 127.35638,17.864601 127.35638,19.277403 125.72518,18.40716 C124.617,20.281084 123.37155,21.797886 121.99083,22.957564 122.27339,23.682606 122.5349,24.491043 122.77338,25.385824 123.17015,25.03458 123.5509,24.666662 123.91562,24.284031 L123.91562,29.888148 125.96965,29.888148 125.96965,21.800831 C126.46964,21.087559 126.93155,20.337008 127.35638,19.549174 L127.35638,22.143242 137.56546,22.143242 137.56546,17.864601 133.50447,17.864601 133.50447,17.049297 137.80994,17.049297 137.80994,15.420647 133.50447,15.420647 133.50447,14.19131 z M181.40163,14.175616 C181.40163,15.155748 181.39862,16.049542 181.39461,16.857983 L179.88565,16.857983 179.88565,18.966395 181.36055,18.966395 C181.33348,22.394404 180.8806,24.919789 179.99986,26.543532 179.79846,26.559231 179.59207,26.577871 179.37964,26.599451 L179.37964,14.941868 172.8398,14.941868 172.8398,27.101784 C172.59531,27.118466 172.35083,27.1322 172.10635,27.14201 L172.38289,29.281819 C174.16139,29.07971 176.28658,28.869753 178.76042,28.650969 179.34158,29.076767 179.87964,29.5271 180.3746,29.999998 181.10805,29.367176 181.8004,28.270291 182.44968,26.711302 183.09996,25.151333 183.45667,22.570023 183.5228,18.966395 L185.41351,18.966395 C185.41853,21.020844 185.40048,22.720133 185.35739,24.064261 185.31331,25.408384 185.26622,26.232519 185.21411,26.535689 185.16202,26.838848 185.04378,27.072354 184.85942,27.234238 184.67406,27.39612 184.42456,27.477553 184.10895,27.477553 183.80434,27.477553 183.24425,27.455967 182.42966,27.41378 182.63605,28.201615 182.79335,28.957071 182.90157,29.681132 184.4406,29.643852 185.39346,29.57223 185.76019,29.466273 186.12692,29.359329 186.43852,29.169972&#xd;&#xa;186.69403,28.898205 186.94852,28.627417 187.13089,28.30365 187.2401,27.928868 187.34932,27.553099 187.41644,26.835903 187.4445,25.777279 L187.61583,16.857983 183.55487,16.857983 C183.56589,16.059353 183.57089,15.165558 183.57089,14.175616 z M145.63733,14.175616 L145.63733,15.644347 140.22368,15.644347 140.22368,20.850132 145.63733,20.850132 145.63733,21.968601 139.60446,21.968601 139.60446,28.131954 141.78876,28.131954 141.78876,27.238159 145.63733,27.238159 145.63733,29.872448 147.98595,29.872448 147.98595,27.238159 151.76938,27.238159 151.76938,28.131954 153.95468,28.131954 153.95468,21.968601 147.98595,21.968601 147.98595,20.850132 153.33545,20.850132 153.33545,15.644347 147.98595,15.644347 147.98595,14.175616&#xd;&#xa; z M125.15506,14.095162 C124.28534,15.586456 123.26234,16.809904 122.08802,17.768454 122.47979,18.226633 122.88158,18.811377 123.2954,19.524647 124.64305,18.300217 125.8885,16.800093 127.02975,15.022315 z M114.39089,13.999995 L111.76574,14.382633 C111.90101,14.675983 112.04529,15.000732 112.19759,15.356876 L105.42226,15.356876 105.42226,16.9865 121.43575,16.9865 121.43575,15.356876 114.92094,15.356876 C114.76363,14.931072 114.58627,14.478779 114.39089,13.999995 z M0,0 L19.999996,0 103,0 515,0 515,2.0000004 477,39.999993 103,39.999993 19.999996,39.999993 0,39.999993 z" Margin="-20,0,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="0">
+						<Path.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF041921"/>
+								<GradientStop Color="#FF004D62" Offset="1"/>
+							</LinearGradientBrush>
+						</Path.Fill>
+					</Path>
+					<Rectangle Margin="0" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Height="2">
+						<Rectangle.Fill>
+							<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+								<GradientStop Color="#FF192A2C"/>
+								<GradientStop Color="#FF1A505A" Offset="0.439"/>
+								<GradientStop Color="#FF192A2C" Offset="1"/>
+								<GradientStop Color="#FF194D56" Offset="0.558"/>
+							</LinearGradientBrush>
+						</Rectangle.Fill>
+					</Rectangle>
+				</Grid>
+				<Path Data="M429,73" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="0" Margin="0,73,141,0" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="0"/>
+				<Grid HorizontalAlignment="Right" Height="25" Margin="0,35,0,0" VerticalAlignment="Top" Width="285">
+					<Path Data="M24.999998,0 L285,0 285,24.999997 0,24.999997 z" Stretch="Fill" Stroke="Black" StrokeThickness="0" d:LayoutOverrides="HorizontalAlignment">
+						<Path.Effect>
+							<DropShadowEffect/>
+						</Path.Effect>
+						<Path.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FFB47500" Offset="0"/>
+								<GradientStop Color="#FFFDA500" Offset="1"/>
+							</LinearGradientBrush>
+						</Path.Fill>
+					</Path>
+				</Grid>
+				<Grid x:Name="CommandContentGrid" Margin="0,70,0,0" Height="450" VerticalAlignment="Top" Visibility="Visible">
+					<Grid Height="32" Margin="6,0,8,0" VerticalAlignment="Top">
+						<Rectangle Height="2" Stroke="Black" VerticalAlignment="Top" StrokeThickness="0">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+									<GradientStop Color="#FF054F5E" Offset="0"/>
+									<GradientStop Color="#FF03CEF7" Offset="0.312"/>
+									<GradientStop Color="#FF03CEF7" Offset="0.706"/>
+									<GradientStop Color="#FF054F5E" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Rectangle Fill="#FF003B48" Margin="0,2,0,0" Stroke="Black" StrokeThickness="0"/>
+						<Grid HorizontalAlignment="Left" Width="86">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="按键名称" Foreground="White" VerticalAlignment="Center" FontSize="13.333" d:LayoutOverrides="Width" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+						<Grid HorizontalAlignment="Left" Width="160" Margin="86,0,0,0">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="串口指令" Foreground="White" VerticalAlignment="Center" FontSize="13.333" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+						<Grid Margin="246,0,0,0" HorizontalAlignment="Left" Width="160">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="串口指令" Foreground="White" VerticalAlignment="Center" FontSize="13.333" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+						<Grid Margin="406,0,0,0" HorizontalAlignment="Left" Width="60">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="快捷键" Foreground="White" VerticalAlignment="Center" FontSize="13.333" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+						<Grid Margin="466,0,0,0" HorizontalAlignment="Left" Width="40">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="有效" Foreground="White" VerticalAlignment="Center" FontSize="13.333" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+						<Grid Margin="506,0,0,0" HorizontalAlignment="Left" Width="52">
+							<TextBlock Margin="0" TextWrapping="Wrap" Text="删除" Foreground="White" VerticalAlignment="Center" FontSize="13.333" HorizontalAlignment="Center" FontFamily="Microsoft YaHei"/>
+						</Grid>
+					</Grid>
+					<Grid Margin="6,32,8,0" Height="400" VerticalAlignment="Top">
+						<Path Data="M0,0 L558,0 558,400 20.000004,400 0,380 z" Fill="#FF004B5A" Height="400" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top"/>
+						<Grid x:Name="CommandContentStackGrid" Margin="6,10,6,20">
+							<StackPanel x:Name="CommandContentStackPanel" Orientation="Vertical" VerticalAlignment="Top"/>
+						</Grid>
+						<Rectangle Height="2" Margin="20,0,0,0" Stroke="Black" VerticalAlignment="Bottom" StrokeThickness="0">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+									<GradientStop Color="#FF0C6D83" Offset="0"/>
+									<GradientStop Color="#FF03CEF7" Offset="0.431"/>
+									<GradientStop Color="#FF03CEF7" Offset="0.621"/>
+									<GradientStop Color="#FF0C6D83" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+					</Grid>
+					<Grid HorizontalAlignment="Right" Height="10" Margin="0,432,8,0" VerticalAlignment="Top" Width="180">
+						<Path Data="M0,0 L180,0 180,9.9999997 9.999999,9.9999997 z" Stretch="Fill" StrokeThickness="0">
+							<Path.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FFB47500" Offset="0"/>
+									<GradientStop Color="#FFFDA500" Offset="1"/>
+								</LinearGradientBrush>
+							</Path.Fill>
+						</Path>
+					</Grid>
+					<Path Data="M0,500 L23,525 575,525" Height="25" Margin="0,425,0,0" Stretch="Fill" VerticalAlignment="Top" Width="572" HorizontalAlignment="Left" StrokeThickness="2" >
+						<Path.Stroke>
+							<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+								<GradientStop Color="#FFD04B05" Offset="0.26"/>
+								<GradientStop Color="#FFD04B05" Offset="0.74"/>
+								<GradientStop Color="#FFD49506" Offset="0.513"/>
+							</LinearGradientBrush>
+						</Path.Stroke>
+					</Path>
+					<Path Data="M0,0 L13,13 0,13 z" HorizontalAlignment="Left" Height="12" Margin="6,438,0,0" Stretch="Fill" StrokeThickness="0" VerticalAlignment="Top" Width="12" Fill="#FF004B5A"/>
+				</Grid>
+				<Grid x:Name="CommandSetGrid" Height="204" Margin="0,0,0,55" VerticalAlignment="Bottom" Visibility="Visible">
+					<Grid Height="35" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment">
+						<Rectangle Stroke="Black" StrokeThickness="0">
+							<Rectangle.Fill>
+								<RadialGradientBrush RadiusY="1.07" RadiusX="0.509">
+									<GradientStop Color="#FF01ACCE"/>
+									<GradientStop Color="#FF00272F" Offset="1"/>
+								</RadialGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Rectangle Fill="Black" Stroke="Black" StrokeThickness="0" Height="1" VerticalAlignment="Top"/>
+						<Rectangle Fill="Black" Stroke="Black" StrokeThickness="0" Height="1" VerticalAlignment="Bottom"/>
+						<TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" TextWrapping="Wrap" Text="机器型号：" Foreground="White" VerticalAlignment="Center" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+						<TextBlock x:Name="MachineNameText" HorizontalAlignment="Left" Margin="100,0,0,0" TextWrapping="Wrap" Foreground="White" VerticalAlignment="Center" FontSize="13.333" FontFamily="Microsoft YaHei" Text="N/A"/>
+					</Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="15,49,0,0" TextWrapping="Wrap" Text="波 特 率" Foreground="White" VerticalAlignment="Top" FontSize="13.333" d:LayoutOverrides="VerticalAlignment" FontFamily="Microsoft YaHei"/>
+					<TextBlock HorizontalAlignment="Left" Margin="15,89,0,0" TextWrapping="Wrap" Text="数 据 位" Foreground="White" VerticalAlignment="Top" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+					<TextBlock HorizontalAlignment="Left" Margin="15,129,0,0" TextWrapping="Wrap" Text="延 迟" Foreground="White" VerticalAlignment="Top" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+					<Grid HorizontalAlignment="Left" Height="25" Margin="85,124,0,0" VerticalAlignment="Top" Width="100">
+						<Rectangle Stroke="#FF00D1FA">
+							<Rectangle.Fill>
+								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+									<GradientStop Color="#FF002531" Offset="0"/>
+									<GradientStop Color="#FF00495D" Offset="1"/>
+								</LinearGradientBrush>
+							</Rectangle.Fill>
+						</Rectangle>
+						<Grid Margin="3" ClipToBounds="True">
+							<TextBox Margin="-2" TextWrapping="Wrap" Text="1000" FontFamily="/FUIProject_A;component/FontFolder/#Microsoft YaHei" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" SelectionBrush="Gray" FontSize="14.667" TextAlignment="Center" Padding="2,0,2,2"/>
+						</Grid>
+					</Grid>
+					<TextBlock HorizontalAlignment="Left" Margin="195,129,0,0" TextWrapping="Wrap" Text="ms" Foreground="White" VerticalAlignment="Top" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+					<TextBlock Margin="240,49,0,0" TextWrapping="Wrap" Text="校 验 位" Foreground="White" VerticalAlignment="Top" FontSize="13.333" HorizontalAlignment="Left" d:LayoutOverrides="VerticalAlignment" FontFamily="Microsoft YaHei"/>
+					<TextBlock Margin="240,89,0,0" TextWrapping="Wrap" Text="停 止 位" Foreground="White" VerticalAlignment="Top" FontSize="13.333" HorizontalAlignment="Left" FontFamily="Microsoft YaHei"/>
+					<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="RemoveAllButton" HorizontalAlignment="Left" Height="30" Margin="15,0,0,0" VerticalAlignment="Bottom" Width="120" ButtonStr="全 部 清 空" MouseLeftButtonUp="RemoveAllButton_MouseLeftButtonUp"/>
+					<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="LoadIniButton" HorizontalAlignment="Left" Height="30" Margin="155,0,0,0" VerticalAlignment="Bottom" Width="120" ButtonStr="加 载 配 置" MouseLeftButtonUp="LoadIniButton_MouseLeftButtonUp"/>
+					<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="SaveIniButton" HorizontalAlignment="Right" Height="30" Margin="0,0,155,0" VerticalAlignment="Bottom" Width="120" ButtonStr="保 存 配 置" MouseLeftButtonUp="SaveIniButton_MouseLeftButtonUp"/>
+					<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="CommandExecuteButton" HorizontalAlignment="Right" Height="30" Margin="0,0,15,0" VerticalAlignment="Bottom" Width="120" ButtonStr="执 行 命 令" MouseLeftButtonUp="CommandExecuteButton_MouseLeftButtonUp"/>
+					<FUIProject_A_Controls_SimpleControls:CheckBoxType1 x:Name="SendByHexCheckBox" HorizontalAlignment="Left" Height="20" Margin="435,47,0,0" VerticalAlignment="Top" Width="110" CheckTextStr="十六进制发送"/>
+					<FUIProject_A_Controls_SimpleControls:CheckBoxType1 HorizontalAlignment="Left" Height="20" Margin="435,87,0,0" Width="80" VerticalAlignment="Top" CheckTextStr="循环发送"/>
+				</Grid>
+				<Grid x:Name="CloseGrid" HorizontalAlignment="Right" Height="20" Margin="0,8,8,0" VerticalAlignment="Top" Width="20" Background="#00000000" MouseLeftButtonUp="CloseGrid_MouseLeftButtonUp" MouseEnter="CloseGrid_MouseEnter" MouseLeave="CloseGrid_MouseLeave" MouseLeftButtonDown="CloseGrid_MouseLeftButtonDown" Cursor="Hand">
+					<Path x:Name="ClosePath" Data="M8,0.5 L12,0.5 12,8 19.5,8 19.5,12 12,12 12,19.5 8,19.5 8,12 0.5,12 0.5,8 8,8 z" Fill="#FF15AFAB" HorizontalAlignment="Center" Height="20" Stretch="Fill" Stroke="Black" VerticalAlignment="Center" Width="20" StrokeThickness="0" RenderTransformOrigin="0.5,0.5">
+						<Path.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform Angle="45"/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Path.RenderTransform>
+					</Path>
+				</Grid>
+				<Grid x:Name="MinGrid" HorizontalAlignment="Right" Height="20" Margin="0,8,40,0" VerticalAlignment="Top" Width="18" Background="#00000000" MouseLeftButtonUp="MinGrid_MouseLeftButtonUp" MouseEnter="MinGrid_MouseEnter" MouseLeave="MinGrid_MouseLeave" MouseLeftButtonDown="MinGrid_MouseLeftButtonDown" Cursor="Hand">
+					<Path x:Name="MinPath" Data="M0,0 L18,0 L18,4 L0,4 z" Fill="#FF15AFAB" Height="4" Margin="0,0,0,1" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Bottom"/>
+				</Grid>
+				<Grid Height="25" Margin="204,0,0,0" VerticalAlignment="Bottom">
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,25,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,50,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,75,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,100,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,125,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,150,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,175,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,200,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,225,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,250,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,275,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,300,0" />
+					<Path Data="M12.5,0 L25,0 12.5,25 0,25 z" Fill="#FF062027" HorizontalAlignment="Right" Stretch="Fill" Stroke="Black" StrokeThickness="0" Width="25" Margin="0,0,325,0" />
+					<Rectangle Stroke="Black" StrokeThickness="0">
+						<Rectangle.Fill>
+							<LinearGradientBrush EndPoint="1,0.5" MappingMode="RelativeToBoundingBox" StartPoint="0,0.5">
+								<GradientStop Color="#660B7087" Offset="1"/>
+								<GradientStop Offset="0.246"/>
+							</LinearGradientBrush>
+						</Rectangle.Fill>
+					</Rectangle>
+					<TextBlock HorizontalAlignment="Right" Margin="0,0,10,0" TextWrapping="Wrap" Text="Version: 2.0" Foreground="#FF7C7C7C" VerticalAlignment="Center" FontSize="14.667" FontFamily="Microsoft YaHei"/>
+				</Grid>
+				<Grid x:Name="ButtonContentGrid" Margin="0" ClipToBounds="True" Visibility="Collapsed">
+					<Path Data="M429,73" Fill="#FFF4F4F5" HorizontalAlignment="Right" Height="0" Margin="0,73,141,0" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="0"/>
+					<Grid Height="40" Margin="0,80,0,0" VerticalAlignment="Top">
+						<TextBlock HorizontalAlignment="Left" Margin="15,15,0,0" TextWrapping="Wrap" Text="串 口 号" Foreground="White" VerticalAlignment="Top" FontSize="13.333" FontFamily="Microsoft YaHei"/>
+						<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="SerialPortOpenCloseButton" Margin="200,5,0,0" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" ButtonStr="连接" MouseLeftButtonDown="SerialPortOpenCloseButton_MouseLeftButtonDown"/>
+						<FUIProject_A_Controls_SimpleControls:ButtonType1 x:Name="GoBackButton" Margin="0,5,15,0" Width="120" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" ButtonStr="返回上一页" MouseLeftButtonDown="GoBackButton_MouseLeftButtonDown"/>
+					</Grid>
+					<Grid HorizontalAlignment="Left" Height="160" Margin="0,150,0,0" VerticalAlignment="Top" Width="260">
+						<TextBlock HorizontalAlignment="Left" Margin="15,0,0,0" TextWrapping="Wrap" Text="发送数据" Foreground="White" VerticalAlignment="Top" FontSize="13.333" d:LayoutOverrides="VerticalAlignment" FontFamily="Microsoft YaHei"/>
+						<Grid Margin="15,25,0,0">
+							<Rectangle Fill="#FF03171D" Stroke="#FF00D1FA"/>
+							<TextBlock x:Name="SendDataText" Margin="8" TextWrapping="Wrap" Foreground="White" FontFamily="/FUIProject_A;component/FontFolder/#Microsoft YaHei" FontSize="13.333"/>
+						</Grid>
+					</Grid>
+					<Grid HorizontalAlignment="Right" Height="160" Margin="0,150,0,0" VerticalAlignment="Top" Width="260">
+						<TextBlock HorizontalAlignment="Left" Margin="0" TextWrapping="Wrap" Text="接收数据" Foreground="White" VerticalAlignment="Top" FontSize="13.333" d:LayoutOverrides="VerticalAlignment" FontFamily="Microsoft YaHei"/>
+						<Grid Margin="0,25,15,0">
+							<Rectangle Fill="#FF03171D" Stroke="#FF00D1FA"/>
+							<TextBlock x:Name="ReceiveDataText" Margin="8" TextWrapping="Wrap" Foreground="White" FontFamily="/FUIProject_A;component/FontFolder/#Microsoft YaHei" FontSize="13.333"/>
+						</Grid>
+					</Grid>
+					<Grid x:Name="CommandButtonGrid" Margin="15,350,15,30"/>
+				</Grid>
+			</Grid>
+			<Grid x:Name="ComboBoxGrid1" Margin="5" ClipToBounds="True">
+				<FUIProject_A_Controls_SimpleControls:ComboBoxType1 x:Name="StopBitsCombo" HorizontalAlignment="Right" Height="25" Margin="0,615,160,0" VerticalAlignment="Top" Width="100" ContentStr="1|2|1.5" SelectIndex="0"/>
+				<FUIProject_A_Controls_SimpleControls:ComboBoxType1 x:Name="BytesizeCombox" HorizontalAlignment="Left" Height="25" Margin="85,615,0,0" VerticalAlignment="Top" Width="100" ContentStr="8|7|6|5" SelectIndex="0"/>
+				<FUIProject_A_Controls_SimpleControls:ComboBoxType1 x:Name="BaudRateCombo" HorizontalAlignment="Left" Height="25" Margin="85,575,0,0" VerticalAlignment="Top" Width="100" ContentStr="4800|9600|19200|38400|43000|56000|57600|115200" SelectIndex="1"/>
+				<FUIProject_A_Controls_SimpleControls:ComboBoxType1 x:Name="ParityCombo" HorizontalAlignment="Left" Height="25" Margin="310,575,0,0" VerticalAlignment="Top" Width="100" ContentStr="NONE|ODD|EVEN" SelectIndex="0"/>
+			</Grid>
+			<Grid x:Name="ComboBoxGrid2" Margin="5" ClipToBounds="True" Visibility="Collapsed">
+				<FUIProject_A_Controls_SimpleControls:ComboBoxType1 x:Name="PortIndexCombo" HorizontalAlignment="Left" Height="25" Margin="85,90,0,0" VerticalAlignment="Top" Width="100" ContentStr="COM1|COM2|COM3|COM4|COM5|COM6"/>
+			</Grid>
+        
+		</Grid>
+	</Grid>
+</Window>

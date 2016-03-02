@@ -1,0 +1,356 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:FUIProject_Controls_SimpleControls="clr-namespace:FUIProject.Controls.SimpleControls" x:Class="FUIProject.Controls.TitleControl" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Width="700" Height="90">
+    <Grid Margin="0" Width="700" HorizontalAlignment="Left" Height="90" VerticalAlignment="Top">
+		<Grid.Effect>
+			<DropShadowEffect/>
+		</Grid.Effect>
+		<Rectangle Stroke="Black" StrokeThickness="0" RadiusX="3" RadiusY="3">
+			<Rectangle.Fill>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="White" Offset="0.004"/>
+					<GradientStop Color="#FFC8C8C8" Offset="0.19"/>
+					<GradientStop Color="#FFC8C8C8" Offset="0.885"/>
+					<GradientStop Color="#FF8B8B8B" Offset="1"/>
+				</LinearGradientBrush>
+			</Rectangle.Fill>
+		</Rectangle>
+		<Grid HorizontalAlignment="Left" Margin="15,0,0,0" Width="15">
+			<Rectangle Stroke="Black" StrokeThickness="0">
+				<Rectangle.Fill>
+					<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+						<GradientStop Color="#FFE2E2E2" Offset="0"/>
+						<GradientStop Color="#FF858585" Offset="0.167"/>
+						<GradientStop Color="#FF858585" Offset="0.914"/>
+						<GradientStop Color="#FF5E5E5E" Offset="0.993"/>
+					</LinearGradientBrush>
+				</Rectangle.Fill>
+			</Rectangle>
+			<Rectangle Fill="Black" Margin="0" Stroke="Black" StrokeThickness="0" Width="1" HorizontalAlignment="Left"/>
+			<Rectangle Fill="Black" Margin="0" Stroke="Black" StrokeThickness="0" Width="1" HorizontalAlignment="Right"/>
+		</Grid>
+		<Grid HorizontalAlignment="Left" Margin="30,0,0,0" Width="130">
+			<Grid Height="45" VerticalAlignment="Top">
+				<Rectangle Stroke="Black" StrokeThickness="0" d:LayoutOverrides="VerticalAlignment">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FFA1A1A1" Offset="0"/>
+							<GradientStop Color="#FF525252" Offset="0.167"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock Margin="5,9,0,0" TextWrapping="Wrap" Text="Guide" FontFamily="Swis721 BlkCn BT" Foreground="#FFEBEBEB" FontSize="24" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+				<Path Data="M2,0 L10,0 C11.104569,0 12,0.89543051 12,2 12,3.1045694 11.104569,4 10,4 L4,4 4,10 C4,11.104569 3.1045694,12 2,12 0.89543051,12 0,11.104569 0,10 L0,2 C0,1.9654822 0.00087444385,1.9311687 0.002602458,1.8970803 0.0043303315,1.8629919 0.0069117751,1.8291287 0.010325789,1.7955117 0.013739774,1.7618946 0.017986329,1.7285236 0.023044467,1.6954197 0.028102664,1.6623158 0.033972446,1.6294791 0.040632963,1.5969303 0.047293339,1.5643815 0.054744456,1.5321207 0.062965214,1.5001688 0.071186133,1.468217 0.080176696,1.4365741 0.08991605,1.4052612 0.099655382,1.3739482 0.11014351,1.3429651 0.12135941,1.312333 0.13257542,1.2817007 0.14451922,1.2514193&#xa;0.15716994,1.2215098 0.16982061,1.1916002 0.18317819,1.1620624 0.19722176,1.1329174 0.21126524,1.1037723 0.22599472,1.07502 0.24138916,1.0466813 0.25678369,1.0183426 0.27284318,0.9904176 0.28954679,0.96292716 0.30625027,0.9354369 0.32359788,0.90838116 0.34156859,0.88178104 0.3595393,0.8551808 0.37813315,0.82903618 0.39732921,0.80336809 0.41652519,0.77770001 0.43632337,0.7525084 0.45670277,0.7278142 0.47708219,0.70312017 0.49804282,0.67892343 0.51956373,0.65524507 0.54108471,0.63156688&#xa;0.5631659,0.60840696 0.5857864,0.5857864 0.60840696,0.5631659 0.63156688,0.54108471 0.65524507,0.51956373 0.67892343,0.49804282 0.70312017,0.47708219 0.7278142,0.45670277 0.7525084,0.43632337 0.77770001,0.41652519 0.80336809,0.39732921 0.82903618,0.37813315 0.8551808,0.3595393 0.88178104,0.34156859 0.90838116,0.32359788 0.9354369,0.30625027 0.96292716,0.28954679 0.9904176,0.27284318 1.0183426,0.25678369 1.0466813,0.24138916 1.07502,0.22599472 1.1037723,0.21126524 1.1329174,0.19722176&#xa;1.1620624,0.18317819 1.1916002,0.16982061 1.2215098,0.15716994 1.2514193,0.14451922 1.2817007,0.13257542 1.312333,0.12135941 1.3429651,0.11014351 1.3739482,0.099655382 1.4052612,0.08991605 1.4365741,0.080176696 1.468217,0.071186133 1.5001688,0.062965214 1.5321207,0.054744456 1.5643815,0.047293339 1.5969303,0.040632963 1.6294791,0.033972446 1.6623158,0.028102664 1.6954197,0.023044467 1.7285236,0.017986329 1.7618946,0.013739774 1.7955117,0.010325789 1.8291287,0.0069117751 1.8629919,0.0043303315&#xa;1.8970803,0.002602458 1.9311687,0.00087444385 1.9654822,0 2,0 z" Fill="#FFEBEBEB" HorizontalAlignment="Right" Height="12" Margin="0,5,5,0" Stretch="Fill" StrokeThickness="0" VerticalAlignment="Center" Width="12" RenderTransformOrigin="0.5,0.5">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="-45"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Path.RenderTransform>
+				</Path>
+				<Path Data="M2,0 L10,0 C11.104569,0 12,0.89543051 12,2 12,3.1045694 11.104569,4 10,4 L4,4 4,10 C4,11.104569 3.1045694,12 2,12 0.89543051,12 0,11.104569 0,10 L0,2 C0,1.9654822 0.00087444385,1.9311687 0.002602458,1.8970803 0.0043303315,1.8629919 0.0069117751,1.8291287 0.010325789,1.7955117 0.013739774,1.7618946 0.017986329,1.7285236 0.023044467,1.6954197 0.028102664,1.6623158 0.033972446,1.6294791 0.040632963,1.5969303 0.047293339,1.5643815 0.054744456,1.5321207 0.062965214,1.5001688 0.071186133,1.468217 0.080176696,1.4365741 0.08991605,1.4052612 0.099655382,1.3739482 0.11014351,1.3429651 0.12135941,1.312333 0.13257542,1.2817007 0.14451922,1.2514193&#xa;0.15716994,1.2215098 0.16982061,1.1916002 0.18317819,1.1620624 0.19722176,1.1329174 0.21126524,1.1037723 0.22599472,1.07502 0.24138916,1.0466813 0.25678369,1.0183426 0.27284318,0.9904176 0.28954679,0.96292716 0.30625027,0.9354369 0.32359788,0.90838116 0.34156859,0.88178104 0.3595393,0.8551808 0.37813315,0.82903618 0.39732921,0.80336809 0.41652519,0.77770001 0.43632337,0.7525084 0.45670277,0.7278142 0.47708219,0.70312017 0.49804282,0.67892343 0.51956373,0.65524507 0.54108471,0.63156688&#xa;0.5631659,0.60840696 0.5857864,0.5857864 0.60840696,0.5631659 0.63156688,0.54108471 0.65524507,0.51956373 0.67892343,0.49804282 0.70312017,0.47708219 0.7278142,0.45670277 0.7525084,0.43632337 0.77770001,0.41652519 0.80336809,0.39732921 0.82903618,0.37813315 0.8551808,0.3595393 0.88178104,0.34156859 0.90838116,0.32359788 0.9354369,0.30625027 0.96292716,0.28954679 0.9904176,0.27284318 1.0183426,0.25678369 1.0466813,0.24138916 1.07502,0.22599472 1.1037723,0.21126524 1.1329174,0.19722176&#xa;1.1620624,0.18317819 1.1916002,0.16982061 1.2215098,0.15716994 1.2514193,0.14451922 1.2817007,0.13257542 1.312333,0.12135941 1.3429651,0.11014351 1.3739482,0.099655382 1.4052612,0.08991605 1.4365741,0.080176696 1.468217,0.071186133 1.5001688,0.062965214 1.5321207,0.054744456 1.5643815,0.047293339 1.5969303,0.040632963 1.6294791,0.033972446 1.6623158,0.028102664 1.6954197,0.023044467 1.7285236,0.017986329 1.7618946,0.013739774 1.7955117,0.010325789 1.8291287,0.0069117751 1.8629919,0.0043303315&#xa;1.8970803,0.002602458 1.9311687,0.00087444385 1.9654822,0 2,0 z" Fill="#FFEBEBEB" HorizontalAlignment="Right" Height="12" Margin="0,5,20,0" Stretch="Fill" StrokeThickness="0" VerticalAlignment="Center" Width="12" RenderTransformOrigin="0.5,0.5">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="-45"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Path.RenderTransform>
+				</Path>
+			</Grid>
+			<Grid Height="45" VerticalAlignment="Bottom" Margin="0,0,1,0">
+				<Rectangle Margin="0" Stroke="Black" StrokeThickness="0" Fill="#FFC8C8C8"/>
+				<Rectangle Margin="0" Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#CC4D4D4D"/>
+							<GradientStop Color="#00C8C8C8" Offset="0.242"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Margin="0" Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#CC4D4D4D"/>
+							<GradientStop Color="#00C8C8C8" Offset="0.056"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Margin="0" Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#CC4D4D4D" Offset="1"/>
+							<GradientStop Color="#00C8C8C8" Offset="0.963"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<TextBlock Margin="5,3,0,0" TextWrapping="Wrap" Text="Serial Port Debug Assistant" HorizontalAlignment="Left" Foreground="#FF525252" FontFamily="Swis721 BlkCn BT" FontSize="16" d:LayoutOverrides="Height" VerticalAlignment="Top"/>
+			</Grid>
+			<Rectangle Fill="Black" Margin="0" Stroke="Black" StrokeThickness="0" Width="1" HorizontalAlignment="Right"/>
+		</Grid>
+		<Grid Margin="160,0,0,0">
+			<Grid Margin="140,15,0,0" Height="60" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380">
+				<Rectangle Fill="#FF818181" StrokeThickness="0" Height="40" Width="380" HorizontalAlignment="Left" VerticalAlignment="Center" RadiusX="20" RadiusY="20"/>
+        
+				<FUIProject_Controls_SimpleControls:PortNameSetButton Margin="40,0,0,0" Width="80" Height="60" VerticalAlignment="Center" HorizontalAlignment="Left" IsSetTag="False"/>
+				<Rectangle Fill="#FF818181" Margin="120,0,0,0" RadiusY="30" RadiusX="30" StrokeThickness="0" Height="60" VerticalAlignment="Center" Width="240" HorizontalAlignment="Left"/>
+				<Grid Margin="120,0,20,0">
+					<Rectangle RadiusY="30" RadiusX="30" StrokeThickness="2" Margin="5">
+						<Rectangle.Stroke>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF626262" Offset="0"/>
+								<GradientStop Color="#FFD4D4D4" Offset="1"/>
+							</LinearGradientBrush>
+						</Rectangle.Stroke>
+					</Rectangle>
+					<Rectangle RadiusY="30" RadiusX="30" StrokeThickness="0" Margin="5" Fill="#FFC8C8C8">
+						<Rectangle.Stroke>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF626262" Offset="0"/>
+								<GradientStop Color="#FFD4D4D4" Offset="1"/>
+							</LinearGradientBrush>
+						</Rectangle.Stroke>
+					</Rectangle>
+					<Path Data="M15.188006,48 L34.811993,48 34.731129,48.035378 C31.74017,49.300446 28.451778,50 25,50 21.54822,50 18.25983,49.300446 15.268872,48.035378 z M25,0 C38.807117,0 50,11.192882 50,25 L0,25 C0,11.192882 11.192882,0 25,0 z" HorizontalAlignment="Left" Margin="5,5,0,5" RenderTransformOrigin="0.5,0.5" Stretch="Fill" StrokeThickness="0" Width="50" >
+						<Path.Fill>
+							<RadialGradientBrush GradientOrigin="0.5,1.2" Center="0.5,0.5">
+								<GradientStop Color="#FF454545" Offset="1"/>
+								<GradientStop Color="#00C8C8C8" Offset="0.941"/>
+							</RadialGradientBrush>
+						</Path.Fill>
+						<Path.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform Angle="-90"/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Path.RenderTransform>
+					</Path>
+					<Rectangle RadiusY="30" RadiusX="30" StrokeThickness="0" Margin="5">
+						<Rectangle.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF525252" Offset="0"/>
+								<GradientStop Offset="0.056" Color="#00C8C8C8"/>
+							</LinearGradientBrush>
+						</Rectangle.Fill>
+						<Rectangle.Stroke>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF626262" Offset="0"/>
+								<GradientStop Color="#FFD4D4D4" Offset="1"/>
+							</LinearGradientBrush>
+						</Rectangle.Stroke>
+					</Rectangle>
+					<Rectangle RadiusY="30" RadiusX="30" StrokeThickness="0" Margin="5">
+						<Rectangle.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF4B4B4B" Offset="1"/>
+								<GradientStop Offset="0.967" Color="#00C8C8C8"/>
+							</LinearGradientBrush>
+						</Rectangle.Fill>
+						<Rectangle.Stroke>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FF626262" Offset="0"/>
+								<GradientStop Color="#FFD4D4D4" Offset="1"/>
+							</LinearGradientBrush>
+						</Rectangle.Stroke>
+					</Rectangle>
+					<Path Data="M15.188006,48 L34.811993,48 34.731129,48.035378 C31.74017,49.300446 28.451778,50 25,50 21.54822,50 18.25983,49.300446 15.268872,48.035378 z M25,0 C38.807117,0 50,11.192882 50,25 L0,25 C0,11.192882 11.192882,0 25,0 z" HorizontalAlignment="Right" Margin="0,5,5,5" RenderTransformOrigin="0.5,0.5" Stretch="Fill" StrokeThickness="0" Width="50" >
+						<Path.Fill>
+							<RadialGradientBrush GradientOrigin="0.5,1.2" Center="0.5,0.5">
+								<GradientStop Color="#FF454545" Offset="1"/>
+								<GradientStop Color="#00C8C8C8" Offset="0.941"/>
+							</RadialGradientBrush>
+						</Path.Fill>
+						<Path.RenderTransform>
+							<TransformGroup>
+								<ScaleTransform/>
+								<SkewTransform/>
+								<RotateTransform Angle="90"/>
+								<TranslateTransform/>
+							</TransformGroup>
+						</Path.RenderTransform>
+					</Path>
+					<FUIProject_Controls_SimpleControls:TitlePortStateScreen Margin="25,15" PortStateType="Active"/>
+				</Grid>
+				<Path Data="M2,0 L10,0 C11.104569,0 12,0.89543051 12,2 12,3.1045694 11.104569,4 10,4 L4,4 4,10 C4,11.104569 3.1045694,12 2,12 0.89543051,12 0,11.104569 0,10 L0,2 C0,1.9654822 0.00087444385,1.9311687 0.002602458,1.8970803 0.0043303315,1.8629919 0.0069117751,1.8291287 0.010325789,1.7955117 0.013739774,1.7618946 0.017986329,1.7285236 0.023044467,1.6954197 0.028102664,1.6623158 0.033972446,1.6294791 0.040632963,1.5969303 0.047293339,1.5643815 0.054744456,1.5321207 0.062965214,1.5001688 0.071186133,1.468217 0.080176696,1.4365741 0.08991605,1.4052612 0.099655382,1.3739482 0.11014351,1.3429651 0.12135941,1.312333 0.13257542,1.2817007 0.14451922,1.2514193&#xa;0.15716994,1.2215098 0.16982061,1.1916002 0.18317819,1.1620624 0.19722176,1.1329174 0.21126524,1.1037723 0.22599472,1.07502 0.24138916,1.0466813 0.25678369,1.0183426 0.27284318,0.9904176 0.28954679,0.96292716 0.30625027,0.9354369 0.32359788,0.90838116 0.34156859,0.88178104 0.3595393,0.8551808 0.37813315,0.82903618 0.39732921,0.80336809 0.41652519,0.77770001 0.43632337,0.7525084 0.45670277,0.7278142 0.47708219,0.70312017 0.49804282,0.67892343 0.51956373,0.65524507 0.54108471,0.63156688&#xa;0.5631659,0.60840696 0.5857864,0.5857864 0.60840696,0.5631659 0.63156688,0.54108471 0.65524507,0.51956373 0.67892343,0.49804282 0.70312017,0.47708219 0.7278142,0.45670277 0.7525084,0.43632337 0.77770001,0.41652519 0.80336809,0.39732921 0.82903618,0.37813315 0.8551808,0.3595393 0.88178104,0.34156859 0.90838116,0.32359788 0.9354369,0.30625027 0.96292716,0.28954679 0.9904176,0.27284318 1.0183426,0.25678369 1.0466813,0.24138916 1.07502,0.22599472 1.1037723,0.21126524 1.1329174,0.19722176&#xa;1.1620624,0.18317819 1.1916002,0.16982061 1.2215098,0.15716994 1.2514193,0.14451922 1.2817007,0.13257542 1.312333,0.12135941 1.3429651,0.11014351 1.3739482,0.099655382 1.4052612,0.08991605 1.4365741,0.080176696 1.468217,0.071186133 1.5001688,0.062965214 1.5321207,0.054744456 1.5643815,0.047293339 1.5969303,0.040632963 1.6294791,0.033972446 1.6623158,0.028102664 1.6954197,0.023044467 1.7285236,0.017986329 1.7618946,0.013739774 1.7955117,0.010325789 1.8291287,0.0069117751 1.8629919,0.0043303315&#xa;1.8970803,0.002602458 1.9311687,0.00087444385 1.9654822,0 2,0 z" Fill="#FFEBEBEB" HorizontalAlignment="Left" Height="12" Margin="10,0,0,0" Stretch="Fill" StrokeThickness="0" VerticalAlignment="Center" Width="12" RenderTransformOrigin="0.5,0.5">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="135"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Path.RenderTransform>
+				</Path>
+				<Path Data="M2,0 L10,0 C11.104569,0 12,0.89543051 12,2 12,3.1045694 11.104569,4 10,4 L4,4 4,10 C4,11.104569 3.1045694,12 2,12 0.89543051,12 0,11.104569 0,10 L0,2 C0,1.9654822 0.00087444385,1.9311687 0.002602458,1.8970803 0.0043303315,1.8629919 0.0069117751,1.8291287 0.010325789,1.7955117 0.013739774,1.7618946 0.017986329,1.7285236 0.023044467,1.6954197 0.028102664,1.6623158 0.033972446,1.6294791 0.040632963,1.5969303 0.047293339,1.5643815 0.054744456,1.5321207 0.062965214,1.5001688 0.071186133,1.468217 0.080176696,1.4365741 0.08991605,1.4052612 0.099655382,1.3739482 0.11014351,1.3429651 0.12135941,1.312333 0.13257542,1.2817007 0.14451922,1.2514193&#xa;0.15716994,1.2215098 0.16982061,1.1916002 0.18317819,1.1620624 0.19722176,1.1329174 0.21126524,1.1037723 0.22599472,1.07502 0.24138916,1.0466813 0.25678369,1.0183426 0.27284318,0.9904176 0.28954679,0.96292716 0.30625027,0.9354369 0.32359788,0.90838116 0.34156859,0.88178104 0.3595393,0.8551808 0.37813315,0.82903618 0.39732921,0.80336809 0.41652519,0.77770001 0.43632337,0.7525084 0.45670277,0.7278142 0.47708219,0.70312017 0.49804282,0.67892343 0.51956373,0.65524507 0.54108471,0.63156688&#xa;0.5631659,0.60840696 0.5857864,0.5857864 0.60840696,0.5631659 0.63156688,0.54108471 0.65524507,0.51956373 0.67892343,0.49804282 0.70312017,0.47708219 0.7278142,0.45670277 0.7525084,0.43632337 0.77770001,0.41652519 0.80336809,0.39732921 0.82903618,0.37813315 0.8551808,0.3595393 0.88178104,0.34156859 0.90838116,0.32359788 0.9354369,0.30625027 0.96292716,0.28954679 0.9904176,0.27284318 1.0183426,0.25678369 1.0466813,0.24138916 1.07502,0.22599472 1.1037723,0.21126524 1.1329174,0.19722176&#xa;1.1620624,0.18317819 1.1916002,0.16982061 1.2215098,0.15716994 1.2514193,0.14451922 1.2817007,0.13257542 1.312333,0.12135941 1.3429651,0.11014351 1.3739482,0.099655382 1.4052612,0.08991605 1.4365741,0.080176696 1.468217,0.071186133 1.5001688,0.062965214 1.5321207,0.054744456 1.5643815,0.047293339 1.5969303,0.040632963 1.6294791,0.033972446 1.6623158,0.028102664 1.6954197,0.023044467 1.7285236,0.017986329 1.7618946,0.013739774 1.7955117,0.010325789 1.8291287,0.0069117751 1.8629919,0.0043303315&#xa;1.8970803,0.002602458 1.9311687,0.00087444385 1.9654822,0 2,0 z" Fill="#FFEBEBEB" HorizontalAlignment="Left" Height="12" Margin="20,0,0,0" Stretch="Fill" StrokeThickness="0" VerticalAlignment="Center" Width="12" RenderTransformOrigin="0.5,0.5">
+					<Path.RenderTransform>
+						<TransformGroup>
+							<ScaleTransform/>
+							<SkewTransform/>
+							<RotateTransform Angle="135"/>
+							<TranslateTransform/>
+						</TransformGroup>
+					</Path.RenderTransform>
+				</Path>
+			</Grid>
+			<TextBlock Margin="20,15,0,0" TextWrapping="Wrap" Text="Active" HorizontalAlignment="Left" Foreground="#FF525252" FontFamily="Swis721 BlkCn BT" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+			<Grid Margin="65,20,0,0" ClipToBounds="True" Height="5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+				<Rectangle Stroke="Black" StrokeThickness="0" Fill="#FF126695"/>
+				<Rectangle Margin="0,0,22,0" Stroke="Black" StrokeThickness="0" Fill="Lime"/>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="Black" Offset="0"/>
+							<GradientStop Color="#00858585" Offset="0.48"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF121212" Offset="0"/>
+							<GradientStop Color="#00606060" Offset="0.056"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.989"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.963"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Grid>
+			<TextBlock Margin="20,30,0,0" TextWrapping="Wrap" Text="Able" HorizontalAlignment="Left" Foreground="#FF525252" FontFamily="Swis721 BlkCn BT" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+			<TextBlock Margin="20,45,0,0" TextWrapping="Wrap" Text="Disable" HorizontalAlignment="Left" Foreground="#FF525252" FontFamily="Swis721 BlkCn BT" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+			<TextBlock Margin="20,60,0,0" TextWrapping="Wrap" Text="None" HorizontalAlignment="Left" Foreground="#FF525252" FontFamily="Swis721 BlkCn BT" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+			<Grid Margin="65,35,0,0" ClipToBounds="True" Height="5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+				<Rectangle Stroke="Black" StrokeThickness="0" Fill="#FF126695"/>
+				<Rectangle Margin="0,0,30,0" Stroke="Black" StrokeThickness="0" Fill="Yellow"/>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="Black" Offset="0"/>
+							<GradientStop Color="#00858585" Offset="0.48"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF121212" Offset="0"/>
+							<GradientStop Color="#00606060" Offset="0.056"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.989"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.963"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Grid>
+			<Grid Margin="65,50,0,0" ClipToBounds="True" Height="5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+				<Rectangle Stroke="Black" StrokeThickness="0" Fill="#FF126695"/>
+				<Rectangle Margin="0,0,15,0" Stroke="Black" StrokeThickness="0" Fill="Red"/>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="Black" Offset="0"/>
+							<GradientStop Color="#00858585" Offset="0.48"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF121212" Offset="0"/>
+							<GradientStop Color="#00606060" Offset="0.056"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.989"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.963"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Grid>
+			<Grid Margin="65,65,0,0" ClipToBounds="True" Height="5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="60">
+				<Rectangle Stroke="Black" StrokeThickness="0" Fill="#FF126695"/>
+				<Rectangle Margin="0,0,25,0" Stroke="Black" StrokeThickness="0" Fill="Gray"/>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="Black" Offset="0"/>
+							<GradientStop Color="#00858585" Offset="0.48"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF121212" Offset="0"/>
+							<GradientStop Color="#00606060" Offset="0.056"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.989"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+				<Rectangle Stroke="Black" StrokeThickness="0">
+					<Rectangle.Fill>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FF2F2F2F" Offset="1"/>
+							<GradientStop Color="#00787878" Offset="0.963"/>
+						</LinearGradientBrush>
+					</Rectangle.Fill>
+				</Rectangle>
+			</Grid>
+		</Grid>
+        
+	</Grid>
+</UserControl>

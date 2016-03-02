@@ -1,0 +1,199 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace FUIProject.Class
+{
+    class SerialPortClass
+    {
+        static SerialPortClass _SerialPortClass;
+
+        public static SerialPortClass GetInstance()
+        {
+            if (_SerialPortClass == null)
+            {
+                _SerialPortClass = new SerialPortClass();
+            }
+            return _SerialPortClass;
+        }
+
+        private SerialPortClass()
+        {
+            _SystemInfoTreatClass = SystemInfoTreatClass.GetInstance();
+        }
+
+        #region 变量标志位
+
+        private int _PortIndex = -1;
+        public int PortIndex
+        {
+            get
+            {
+                return _PortIndex;
+            }
+            set
+            {
+                if (_PortIndex != value)
+                {
+                    _PortIndex = value;
+                }
+            }
+        }
+
+        private bool _spIsOpen = false;
+        public bool spIsOpen
+        {
+            get
+            {
+                return _spIsOpen;
+            }
+            set
+            {
+                if (_spIsOpen != value)
+                {
+                    _spIsOpen = value;
+                }
+            }
+        }
+
+        private int _ReceiveCount = 0;
+        public int ReceiveCount
+        {
+            get
+            {
+                return _ReceiveCount;
+            }
+            set
+            {
+                if (_ReceiveCount != value)
+                {
+                    _ReceiveCount = value;
+                    if (ReceiveCountChangedEvent != null)
+                    {
+                        ReceiveCountChangedEvent(_ReceiveCount);
+                    }
+                }
+            }
+        }
+
+        private int _SendCount = 0;
+        public int SendCount
+        {
+            get
+            {
+                return _SendCount;
+            }
+            set
+            {
+                if (_SendCount != value)
+                {
+                    _SendCount = value;
+                    if (SendCountChangedEvent != null)
+                    {
+                        SendCountChangedEvent(SendCount);
+                    }
+                }
+            }
+        }
+
+        #endregion
+
+
+        #region 变量定义
+
+        SystemInfoTreatClass _SystemInfoTreatClass;
+
+        #endregion
+
+        #region 自身类委托事件
+
+        public delegate void ReceiveDataArrivedEventHandler(byte[] ReceiveData);
+        public event ReceiveDataArrivedEventHandler ReceiveDataArrivedEvent;
+
+        public delegate void ReceiveCountChangedEventHandler(int ReceiveCount);
+        public event ReceiveCountChangedEventHandler ReceiveCountChangedEvent;
+
+        public delegate void SendDataArrivedEventHandler(byte[] SendData);
+        public event SendDataArrivedEventHandler SendDataArrivedEvent;
+
+        public delegate void SendCountChangedEventHandler(int SendCount);
+        public event SendCountChangedEventHandler SendCountChangedEvent;
+
+        #endregion
+
+        #region 公共方法
+
+        public void OpenSerialPort(int PortIndex)
+        {
+            this.PortIndex = PortIndex;
+            spIsOpen = true;
+            _SystemInfoTreatClass.GetMessage(CommonToolsClass.SystemInfoTypeEnum.SerialOpen);
+        }
+
+        public void CloseSerialPort()
+        {
+            PortIndex = -1;
+            spIsOpen = false;
+            _SystemInfoTreatClass.GetMessage(CommonToolsClass.SystemInfoTypeEnum.SerialClose);
+        }
+
+        public CommonToolsClass.PortStateTypeEnum GetPortStateByIndex(int PortIndex)
+        {
+            if (PortIndex == 1)
+            {
+                return CommonToolsClass.PortStateTypeEnum.Disable;
+            }
+            else
+            {
+                return CommonToolsClass.PortStateTypeEnum.Able;
+            }
+        }
+
+        public string GetPortNameByIndex(int PortIndex)
+        {
+            if (PortIndex >= 0)
+            {
+                return "COM" + (PortIndex + 1).ToString();
+            }
+            else
+            {
+                return "N/A";
+            }
+        }
+
+        public void CommandSendAction(byte[] Command)
+        {
+            if (spIsOpen)
+            {
+                SendCount += Command.Length;
+                if (SendDataArrivedEvent != null)
+                {
+                    SendDataArrivedEvent(Command);
+                }
+                _SystemInfoTreatClass.GetMessage(CommonToolsClass.SystemInfoTypeEnum.CommandSend_Normal);
+            }
+            else
+            {
+                _SystemInfoTreatClass.GetMessage(CommonToolsClass.SystemInfoTypeEnum.CommandSend_SerialNotOpen);
+            }
+        }
+
+        #endregion
+
+
+        #region 测试方法
+
+        byte[] TestData = new byte[] { 0x55, 0xaa, 0x02, 0x12, 0x45, 0x00, 0x27, 0x00, 0x57, 0xf0 };
+        public void TestReceiveData()
+        {
+            ReceiveCount += TestData.Length;
+            if (ReceiveDataArrivedEvent != null)
+            {
+                ReceiveDataArrivedEvent(TestData);
+            }
+        }
+
+        #endregion
+    }
+}
